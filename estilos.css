@@ -1,0 +1,360 @@
+/*FONTS*/
+/*Ubuntu static*/
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+html{
+    scroll-behavior: smooth; /*scroll suave al apretar los links*/
+}
+
+body{
+    margin: 0;
+    /*fondo*/
+    background-image:linear-gradient( /*efecto sombreado a la imagen*/
+    0deg, /*direccion del gradiente*/
+    rgba(66, 0, 233, 0.496), /*colore de abajo */
+    rgba(0, 0, 0, 0.193) /* color de ariba*/
+    ), url("imagenes/presentacion-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 3.5em;
+    font-family: "Ubuntu";
+    font-weight: bold;
+}
+h2{
+    font-size: 2.7em;
+    color: beige;
+    font-family: Roboto;
+    font-weight: bold;
+    
+}
+h3{
+    font-size: 2em;
+    color: beige;
+}
+p{
+    font-size: 1.25em;
+}
+.acento{
+    color: blueviolet;
+    
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: thick;
+    box-shadow: 2px 2px 12px black;
+    background-color: darkorchid;
+    color: whitesmoke;
+    transition: all 400ms ease; /*efecto del hover, va a tardar 400ms y ease es para mas suave*/
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(132, 40, 178, 0.083);
+    transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
+}
+
+/* HEADER */
+header{
+    background-color: #1e2021;
+    position: fixed;
+    width: 100%;
+}
+.menu-link-header{
+    margin:0;
+    padding: 25px 30px;
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+    list-style: none;
+    
+}
+.menu-link-header a{
+    padding: 5px 12px;
+    font-weight: bold;
+    color: #337dff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 400ms cubic-bezier(1, 0, 0, 1); /*efecto del hover, va a tardar 400ms y ease es para mas suave*/
+}
+
+.menu-link-header a:hover{
+    color: #ff6d08;
+    background-color:rgba(99, 93, 102, 0.382) ;
+    transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
+}
+
+/*REDES SOCIALES*/
+.redes-sociales{
+    position: fixed; /*flotante*/
+    margin: 120px 10px;
+}
+.redes-sociales i{ /*iconos*/
+    color: #f57524;
+    font-size: 50px;
+    margin:7px 15px;
+    align-items: center;
+    transition: all 400ms cubic-bezier(1, 0, 0, 1);
+}
+.redes-sociales i:hover{
+    transform: scale(-100%);
+}
+
+/* SECCIONES */
+.contenedor{
+    max-width: 1440px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2px;
+    padding: 170px 12px;
+}
+
+/*Presentacion*/
+.presentacion{
+    height: 100vh; /*ocupa el 100% de la pantalla con view hight(vh) */
+}
+.presentacion .contenedor{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: center;
+    color: aliceblue; 
+}
+
+/* Sobre mi */
+.sobre-mi{
+    margin: auto;
+    height: 100vh;
+}
+.sobre-mi .contenedor{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.sobre-mi p{
+    line-height: 1.5; /*espaciado entre renglones*/
+    color: #ff6d08;
+    font-family:"Ubuntu";
+}
+.sobre-mi .foto-perfil{
+    background-image: url("imagenes/foto-perfil.png");
+    background-size: cover;
+    background-position: center ;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 200px;
+    width: 200px;
+}
+/* Conocimientos */
+.conocimientos{
+    text-align: center;
+    padding-top: 100px;
+}
+.conocimientos .contenedor{
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.conocimientos .contenedor img{
+    height: 150px;
+    width: 150px;
+    padding: 10px 10px;
+    transition: all 400ms cubic-bezier(1, 0, 0, 1);
+    filter: brightness(0) saturate(100%) invert(50%) sepia(71%) saturate(2134%) hue-rotate(351deg) brightness(97%) contrast(111%);
+    
+}
+.conocimientos .contenedor img:hover{
+    transform: translateY(-30%);
+}
+
+/* Proyectos*/
+.proyectos{
+    text-align: center;
+    margin: auto;
+}
+.proyectos .contenedor{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding-top:50px ;
+}
+.proyectos h2{
+    padding-top: 150px;
+}
+.proyectos p{
+    display: none; /*dejar los parrafos vacios*/
+    line-height: 1.5; /*espaciado entre renglones*/
+    color: #ff6d08;
+    font-family:"Ubuntu";
+}
+.proyectos a{
+    padding: 5px 12px;
+    font-size: larger;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 400ms cubic-bezier(1, 0, 0, 1); /*efecto del hover, va a tardar 400ms y ease es para mas suave*/
+}
+.proyectos a:hover{
+    color: #ff6d08;
+    background-color:rgba(40, 38, 41, 0.382) ;
+    transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
+}
+.proyectos .carta1,.carta2, .carta3{
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.571);
+    transition: all 400ms ease;
+}
+.proyectos .carta1:hover, .carta2:hover, .carta3:hover{
+    background-color:rgba(100, 5, 148, 0.495) ;
+    transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
+}
+
+.proyectos .carta1{
+    background-image:linear-gradient( /*efecto sombreado a la imagen*/
+    0deg, /*direccion del gradiente*/
+    rgba(0, 0, 0, 0.7), /*colore de abajo */
+    rgba(0, 0, 0, 0.7) /* color de ariba*/
+    ), url("imagenes/sistema-gestion-de-articulos.png");
+   
+}
+.proyectos .carta2{
+    background-image:linear-gradient( /*efecto sombreado a la imagen*/
+    0deg, /*direccion del gradiente*/
+    rgba(0, 0, 0, 0.7), /*colore de abajo */
+    rgba(0, 0, 0, 0.7) /* color de ariba*/
+    ), url("imagenes/manejo-de-archivos-c++.png");
+
+}
+.proyectos .carta3{
+    background-image:linear-gradient( /*efecto sombreado a la imagen*/
+    0deg, /*direccion del gradiente*/
+    rgba(0, 0, 0, 0.7), /*colore de abajo */
+    rgba(0, 0, 0, 0.7) /* color de ariba*/
+    ), url("imagenes/boss-rabbits-rabber.PNG");
+}
+.proyectos .parrafo-etiqueta{
+    padding: 15px;
+    text-align: center;
+}
+
+/*Formulario de contacto*/
+.formulario-de-contacto{
+    text-align: center;
+}
+.formulario-de-contacto .contenedor{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.formulario-de-contacto form{
+    background: rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 650px;
+    border-radius: 10px;
+    margin: auto;
+    padding:5px 35px;
+    margin-top: 10px;
+}
+.formulario h2{
+    text-align: center;
+    padding: 14px 0;
+}
+.formulario-de-contacto p{
+    color: #f57524;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: #000000;
+}
+
+.formulario-de-contacto .campo{
+    display: block; /*alinear uno a bajo delo otro*/
+    font-size: 16px;
+    font-family: Roboto;
+    position: relative;
+}
+.formulario-de-contacto .formulario .campo, .formulario textarea{
+    background: rgba(0,0,0,.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #337dff;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: aliceblue;
+}
+
+.formulario-de-contacto .contenedor .formulario{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.formulario-de-contacto textarea{
+    resize: vertical;
+    max-height:150px ;
+    min-height: 50px;
+}
+.formulario-de-contacto form .btn-enviar{
+    width: 70%;
+    outline: none;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    margin-left: 80%;
+    color: #ff6d08;
+}
+
+
+
+@media(min-width: 720px){ /*Cuando la pantalla supere los 720px se van a aplicar los siguientes css*/
+    .proyectos .contenedor{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .proyectos p{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .proyectos .carta1{
+        padding: 15px;
+    }
+    .proyectos .carta2{
+        padding: 15px;
+    }
+    .proyectos .carta3{
+        padding: 20px;
+    }
+    .proyectos h3{
+        margin-top: 0;
+    }
+
+}
