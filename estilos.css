@@ -227,14 +227,14 @@ header{
     transition: all 400ms ease;
 }
 .proyectos .carta1:hover, .carta2:hover, .carta3:hover{
-    background-color:rgba(100, 5, 148, 0.495) ;
+    
     transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
 }
 
 .proyectos .carta1{
     background-image:linear-gradient( /*efecto sombreado a la imagen*/
     0deg, /*direccion del gradiente*/
-    rgba(0, 0, 0, 0.7), /*colore de abajo */
+    rgba(0, 0, 0, 0.7), /*color de abajo */
     rgba(0, 0, 0, 0.7) /* color de ariba*/
     ), url("imagenes/sistema-gestion-de-articulos.png");
    
