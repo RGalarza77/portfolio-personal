@@ -13,9 +13,18 @@
 
 html{
     scroll-behavior: smooth; /*scroll suave al apretar los links*/
+    font-family: Helvetica, Verdana, Serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
+    /*tamaño de letra responsive*/
+    font-size: clamp(1rem, 3vw, 2rem);
     margin: 0;
     /*fondo*/
     background-image:linear-gradient( /*efecto sombreado a la imagen*/
@@ -34,7 +43,7 @@ h1{
     font-weight: bold;
 }
 h2{
-    font-size: 2.7em;
+    font-size: 2em;
     color: beige;
     font-family: Roboto;
     font-weight: bold;
@@ -45,14 +54,14 @@ h3{
     color: beige;
 }
 p{
-    font-size: 1.25em;
+    font-size: smaller;
 }
 .acento{
     color: blueviolet;
-    
 }
+
 button{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     padding: 10px 50px;
     border-radius: 10px;
@@ -73,10 +82,11 @@ header{
     background-color: #1e2021;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .menu-link-header{
     margin:0;
-    padding: 25px 30px;
+    padding: 1em;
     flex-direction: column;
     display: flex;
     align-items: end;
@@ -84,8 +94,9 @@ header{
     
 }
 .menu-link-header a{
-    padding: 5px 12px;
+    padding: 0.5em;
     font-weight: bold;
+    font-size: 1.5rem;
     color: #337dff;
     text-decoration: none;
     cursor: pointer;
@@ -116,16 +127,21 @@ header{
 
 /* SECCIONES */
 .contenedor{
-    max-width: 1440px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 2px;
-    padding: 170px 12px;
+    margin: 5%;
+    padding: 10% 10%;
+    text-align: center;
+    border-radius: 15px;
 }
 
 /*Presentacion*/
 .presentacion{
-    height: 100vh; /*ocupa el 100% de la pantalla con view hight(vh) */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .presentacion .contenedor{
     display: block;
@@ -137,11 +153,9 @@ header{
 }
 
 /* Sobre mi */
-.sobre-mi{
-    margin: auto;
-    height: 100vh;
-}
 .sobre-mi .contenedor{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -152,6 +166,7 @@ header{
     line-height: 1.5; /*espaciado entre renglones*/
     color: #ff6d08;
     font-family:"Ubuntu";
+    text-shadow: 1px 1px 1px #000000;
 }
 .sobre-mi .foto-perfil{
     background-image: url("imagenes/foto-perfil.png");
@@ -162,10 +177,13 @@ header{
     height: 200px;
     width: 200px;
 }
+.sobre-mi button{
+    margin-top: 20%;
+}
 /* Conocimientos */
 .conocimientos{
     text-align: center;
-    padding-top: 100px;
+
 }
 .conocimientos .contenedor{
     display: block;
@@ -189,21 +207,25 @@ header{
 /* Proyectos*/
 .proyectos{
     text-align: center;
-    margin: auto;
 }
 .proyectos .contenedor{
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding-top:50px ;
+    display: block;
+    gap:10px;
 }
 .proyectos h2{
-    padding-top: 150px;
+    
 }
 .proyectos p{
     display: none; /*dejar los parrafos vacios*/
     line-height: 1.5; /*espaciado entre renglones*/
     color: #ff6d08;
     font-family:"Ubuntu";
+    font-size: large;
+    margin-top: 2%;
+    text-shadow: 2px 2px 12px rgb(103, 100, 96);;
 }
 .proyectos a{
     padding: 5px 12px;
@@ -222,7 +244,10 @@ header{
     background-position: center center;
     background-size: cover;
     border-radius: 10px;
-    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap:5px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.571);
     transition: all 400ms ease;
 }
@@ -252,8 +277,9 @@ header{
     0deg, /*direccion del gradiente*/
     rgba(0, 0, 0, 0.7), /*colore de abajo */
     rgba(0, 0, 0, 0.7) /* color de ariba*/
-    ), url("imagenes/boss-rabbits-rabber.PNG");
+    ), url("imagenes/portfolio-nubemagenta.PNG");
 }
+
 .proyectos .parrafo-etiqueta{
     padding: 15px;
     text-align: center;
@@ -263,10 +289,10 @@ header{
 .formulario-de-contacto{
     text-align: center;
 }
-.formulario-de-contacto .contenedor{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.formulario-de-contacto> .contenedor{
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 5%;
 }
 .formulario-de-contacto form{
     background: rgba(0, 0, 0, 0.6);
@@ -314,12 +340,12 @@ header{
     justify-content: center;
 }
 .formulario-de-contacto textarea{
-    resize: vertical;
+    resize: none;
     max-height:150px ;
     min-height: 50px;
 }
 .formulario-de-contacto form .btn-enviar{
-    width: 70%;
+    width: 60%;
     outline: none;
     padding: 15px 10px;
     margin-bottom: 10px;
@@ -334,7 +360,7 @@ footer{
 
 
 
-@media(min-width: 720px){ /*Cuando la pantalla supere los 720px se van a aplicar los siguientes css*/
+@media(min-width: 1334px){ /*Cuando la pantalla supere los 720px se van a aplicar los siguientes css*/
     .proyectos .contenedor{
         display: flex;
         justify-content: center;
