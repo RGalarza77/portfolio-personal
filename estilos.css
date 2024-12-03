@@ -214,6 +214,7 @@ header{
     padding-top:50px ;
     display: block;
     gap:10px;
+    
 }
 .proyectos h2{
     
@@ -354,10 +355,51 @@ header{
 
 /* FOOTER */
 footer{
-    margin-left: 80%;
-    color: #ff6d08;
+    height: 20vh;
+    width: 100%;
+    background-color: #1e2021;
+    display: flex;
+    flex-direction: column; 
+    
 }
 
+footer h4{
+    text-align: center;
+    color: #ffffffd2;
+}
+
+footer .contenedor-footer-redes{
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 5%;
+    padding: 0 20%;
+}
+
+footer .contenedor-footer-redes a{
+    flex-grow: 1;
+    text-align: center;
+    color: #f57524;
+    
+}
+
+footer .contenedor-footer-redes i{ /*iconos*/
+    font-size: 50px;
+    transition: all 400ms ease;
+}
+footer .contenedor-footer-redes i:hover{
+    transform: translateY(-7%);
+    color: #337dff;
+}
+
+
+
+footer .contenedor-copy p{
+    margin-left: 80vw;
+    color: #ff6d08;
+}
 
 
 @media(min-width: 1334px){ /*Cuando la pantalla supere los 720px se van a aplicar los siguientes css*/
