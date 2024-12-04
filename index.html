@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Rodrigo Galarza</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
-    <script src="script.js"></script>
+    <!-- JS -->
+    <script src="scriptMenu.js"></script>
 
     <!-- Font Aweasome -->
     <script src="https://kit.fontawesome.com/0a44d9e8d2.js" crossorigin="anonymous"></script>
@@ -26,19 +28,26 @@
 
 <body>
     <header>
-        <div class="menu-link-header">
-            <nav>
-                <ul>
-                    <a href="#presentacion">Inicio</a>
-                    <a href="#sobre-mi">Sobre mi</a>
-                    <a href="#conocimientos">Conocimientos</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#formulario">Contacto</a>
+        <div class="menu-header">
+            <button class="abrir-menu" id="btn-abrir-menu"><i class="fa-solid fa-bars"></i></button>
+            <nav class="menu-header-nav" id="nav">
+                <ul class="menu-header-ul">
+                    <button class="cerrar-menu" id="btn-cerrar-menu"><i class="fa-solid fa-xmark"></i></button>
+                    <li><a href="#presentacion">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#conocimientos">Conocimientos</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+   
+
     <section class="redes-sociales">
+        <div class="icono-redes">
+            <i class="fa-solid fa-address-book"></i>
+        </div>
         <table>
             <tr>
                 <td>
@@ -73,7 +82,7 @@
             <h2>Hola,</h2>
             <h1>Mi nombre es <span class="acento">Rodigo</span></h1>
             <br><br><br><br>
-            <form action="#sobre-mi"><button>Sobre mi ...</button></form>
+            <form action="#sobre-mi"><button class="boton-normal">Sobre mi ...</button></form>
         </div>
     </section>
 
@@ -88,7 +97,7 @@
                 cuanto al trabajo grupal, poseo facilidad de adaptación y siempre intento complementar con lo necesario
                 para cumplir los objetivos.
             </p>
-            <form action="#formulario"><button>Contacto</button></form>
+            <form action="#formulario"><button class="boton-normal">Contacto</button></form>
         </div>
     </section>
 
@@ -163,7 +172,7 @@
                     <p>E-mail</p>
                     <input type="text" name="email" placeholder="Ingrese su e-mail" class="campo">
                     <textarea name="mensaje" placeholder="Escriba su mensaje"></textarea>
-                    <button type="submit" name="enviar" value="enviar mensaje" class="btn-enviar">Enviar
+                    <button type="submit" name="enviar" value="enviar mensaje" class="boton-normal">Enviar
                 </form>
             </div>
         </div>
@@ -192,6 +201,8 @@
             <p>&copy; Rodrigo Galarza, 2024</p>
         </div>
     </footer>
+
+     
 </body>
 
 </html>

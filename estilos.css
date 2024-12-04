@@ -60,7 +60,7 @@ p{
     color: blueviolet;
 }
 
-button{
+.boton-normal{
     font-size: 1em;
     font-weight: bold;
     padding: 10px 50px;
@@ -78,42 +78,58 @@ button:hover{
 }
 
 /* HEADER */
-header{
+
+.menu-header{
     background-color: #1e2021;
     position: fixed;
     width: 100%;
     z-index: 1;
-}
-.menu-link-header{
-    margin:0;
     padding: 1em;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     align-items: end;
-    list-style: none;
-    
 }
-.menu-link-header a{
-    padding: 0.5em;
+
+.menu-header-ul{
+    display: flex;
+    list-style-type: none; /*sacar viñetas*/
+    gap:1.2rem;
+}
+
+.menu-header li a{
     font-weight: bold;
     font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #337dff;
     text-decoration: none;
     cursor: pointer;
     transition: all 400ms cubic-bezier(1, 0, 0, 1); /*efecto del hover, va a tardar 400ms y ease es para mas suave*/
 }
 
-.menu-link-header a:hover{
+.menu-header li a:hover{
     color: #ff6d08;
     background-color:rgba(99, 93, 102, 0.382) ;
     transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
 }
 
+.abrir-menu, .cerrar-menu{
+    display: none;
+}
+
 /*REDES SOCIALES*/
+
 .redes-sociales{
     position: fixed; /*flotante*/
     margin: 120px 10px;
 }
+.redes-sociales .icono-redes{
+    cursor: pointer;
+    top: 0.7rem;
+    right: 1.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
 .redes-sociales i{ /*iconos*/
     color: #f57524;
     font-size: 50px;
@@ -183,8 +199,8 @@ header{
 /* Conocimientos */
 .conocimientos{
     text-align: center;
-
 }
+
 .conocimientos .contenedor{
     display: block;
     background: rgba(0, 0, 0, 0.6);
@@ -192,6 +208,7 @@ header{
     justify-content: center;
     border-radius: 10px;
 }
+
 .conocimientos .contenedor img{
     height: 150px;
     width: 150px;
@@ -200,6 +217,7 @@ header{
     filter: brightness(0) saturate(100%) invert(50%) sepia(71%) saturate(2134%) hue-rotate(351deg) brightness(97%) contrast(111%);
     
 }
+
 .conocimientos .contenedor img:hover{
     transform: translateY(-30%);
 }
@@ -216,9 +234,7 @@ header{
     gap:10px;
     
 }
-.proyectos h2{
-    
-}
+
 .proyectos p{
     display: none; /*dejar los parrafos vacios*/
     line-height: 1.5; /*espaciado entre renglones*/
@@ -253,7 +269,6 @@ header{
     transition: all 400ms ease;
 }
 .proyectos .carta1:hover, .carta2:hover, .carta3:hover{
-    
     transform: translateY(-3%); /*hace que al pasar el cursor la tajeta se va a mover*/
 }
 
@@ -263,7 +278,6 @@ header{
     rgba(0, 0, 0, 0.7), /*color de abajo */
     rgba(0, 0, 0, 0.7) /* color de ariba*/
     ), url("imagenes/sistema-gestion-de-articulos.png");
-   
 }
 .proyectos .carta2{
     background-image:linear-gradient( /*efecto sombreado a la imagen*/
@@ -271,7 +285,6 @@ header{
     rgba(0, 0, 0, 0.7), /*colore de abajo */
     rgba(0, 0, 0, 0.7) /* color de ariba*/
     ), url("imagenes/portfolio-nubemagenta.PNG");
-
 }
 .proyectos .carta3{
     background-image:linear-gradient( /*efecto sombreado a la imagen*/
@@ -345,13 +358,6 @@ header{
     max-height:150px ;
     min-height: 50px;
 }
-.formulario-de-contacto form .btn-enviar{
-    width: 60%;
-    outline: none;
-    padding: 15px 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
 
 /* FOOTER */
 footer{
@@ -360,7 +366,6 @@ footer{
     background-color: #1e2021;
     display: flex;
     flex-direction: column; 
-    
 }
 
 footer h4{
@@ -393,9 +398,6 @@ footer .contenedor-footer-redes i:hover{
     transform: translateY(-7%);
     color: #337dff;
 }
-
-
-
 footer .contenedor-copy p{
     margin-left: 80vw;
     color: #ff6d08;
@@ -423,6 +425,51 @@ footer .contenedor-copy p{
     }
     .proyectos h3{
         margin-top: 0;
+    }
+}
+
+/* Media menu header */
+@media (max-width: 550px){
+
+    .abrir-menu, .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .abrir-menu{
+        color: #000000;
+    }
+
+    .menu-header-nav{
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap:1rem;
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        background-color: #f57524;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+    }
+    .menu-header-nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-header-ul{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+    }
+    .menu-header-ul li a{
+        color: aliceblue;
     }
 
 }
