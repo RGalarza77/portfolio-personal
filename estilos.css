@@ -214,12 +214,11 @@ body .ir-inicio i:hover{
     padding: 10px 10px;
     transition: all 400ms cubic-bezier(1, 0, 0, 1);
     filter: brightness(0) saturate(100%) invert(50%) sepia(71%) saturate(2134%) hue-rotate(351deg) brightness(97%) contrast(111%);
-    color: #6f00ff;
 }
 
 .conocimientos .contenedor img:hover{
     transform: translateY(-20%);
-    filter: brightness(0) saturate(100%) invert(26%) sepia(88%) saturate(7420%) hue-rotate(265deg) brightness(89%) contrast(139%);
+    filter: brightness(0) saturate(100%) invert(36%) sepia(83%) saturate(2008%) hue-rotate(207deg) brightness(102%) contrast(101%);
 }
 
 /* Proyectos*/
@@ -291,7 +290,7 @@ body .ir-inicio i:hover{
     0deg, /*direccion del gradiente*/
     rgba(0, 0, 0, 0.7), /*colore de abajo */
     rgba(0, 0, 0, 0.7) /* color de ariba*/
-    ), url("imagenes/portfolio-nubemagenta.PNG");
+    ), url();
 }
 
 .proyectos .parrafo-etiqueta{
